@@ -28,7 +28,7 @@ spec:
           env:
             - name: GITHUB_REPO
               value: https://github.com/volkancakil/react-builder
-            - name: POOL_INTERVAL
+            - name: POLL_INTERVAL
               value: "30"
           volumeMounts:
             - name: build-output
@@ -36,7 +36,7 @@ spec:
       volumes:
         - name: build-output
           emptyDir: {}
-
+---
 kind: Service
 apiVersion: v1
 metadata:
@@ -51,4 +51,3 @@ spec:
       name: http
       targetPort: 80
   type: LoadBalancer
-

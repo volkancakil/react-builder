@@ -1,4 +1,4 @@
-FROM node
+FROM node:latest
 
 COPY . .
 RUN chmod +x init.sh
